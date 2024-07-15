@@ -5,11 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/main.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-C9+zW25Zv77Jkx+JQ1j5itYd1ekv5pA7UE2hQYZNRfkSijlUZ+vTuWj0Y2m6ZD9/7NWy8vHPSbiy/ySsKioUpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <form class="form">
+        <div class="openbar" style="display: none;">
+            <div class="bar">
+                <div class="back">
+                    <p>Ishlab chiqarilgan yil</p>
+                    <i class="fas fa-times fa-xmark"></i> 
+                </div>
+                <input class="data" required placeholder="YIL" type="text">
+                <p>Order id</p>
+                <input class="id" required placeholder="ORDER ID" type="text">
+                <p>Telefon nomi</p>
+                <input class="name" required placeholder="Markasini kiriting" type="text">
+                <p>Narxini kiriting</p>
+                <input class="price" required placeholder="TELEFON NARXI" type="text">
+                <button class="qoshish" type="button">Qo'shish</button> 
+            </div>
+        </div>
+    </form>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__table">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>DATA</th>
+                                    <th>ORDER ID</th>
+                                    <th>NAME</th>
+                                    <th>PRICE</th>
+                                    <th>QUANTITY</th>
+                                    <th>TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr">
+                                    <td contenteditable="true" data-call="data">2020</td>
+                                    <td contenteditable="true" class="id" data-call="id">22917</td>
+                                    <td contenteditable="true" data-call="name">Iphone 11</td>
+                                    <td contenteditable="true" data-call="price">310</td>
+                                    <td contenteditable="true" data-call="quantity">180</td> 
+                                    <td contenteditable="true" data-call="total">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="plus">Ma'lumot qo'shish</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
     
-
-
-    <script src="./js/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>

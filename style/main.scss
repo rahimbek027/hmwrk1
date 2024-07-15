@@ -1,7 +1,225 @@
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: serif;
-
-}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1380px;
+    width: 100%;
+  }
+  
+  body {
+    background-color: rgb(222, 221, 221);
+  }
+  
+  .openbar {
+    background: rgba(161, 146, 146, 0.33);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    display: none;
+    animation: fadeShow 0.5s forwards;
+    .bar {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      background: #cebdbd;
+      border-radius: 20px;
+      padding: 20px;
+      width: 30%;
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      top: 50%;
+      transform: translateY(-50%);
+      position: relative;
+  
+      .back {
+        display: flex;
+        justify-content: space-between;
+        i {
+          color: red;
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+  
+      p {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+      }
+  
+      input,
+      select {
+        background: rgba(128, 34, 34, 0);
+        color: #fff;
+        font-size: 18px;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        outline: none;
+      }
+  
+      button {
+        width: 100px;
+        margin: auto;
+        background: #5da664;
+        padding: 5px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+  .main {
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+  
+    .score {
+      display: none;
+    }
+  
+    .hero {
+      font-size: 1.125rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      line-height: 1.5;
+      height: 100%;
+      background-color: rgb(143, 143, 127);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+  
+      .hero__wrapper {
+        width: 100%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+  
+        button {
+          margin: auto;
+          padding: 15px;
+          border-radius: 10px;
+          height: 50px;
+          font-size: 30px;
+          background: rgba(107, 20, 20, 0);
+          border: 1px solid rgb(223, 196, 44);
+          color: rgb(102, 98, 185);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+  
+        .hero__table {
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0px 0px 20px 4px rgba(111, 104, 104, 0.2);
+  
+          table {
+            width: 100%;
+            border-radius: 20px;
+            border-collapse: collapse;
+            background: #847d7d;
+            border: none;
+  
+            th {
+              text-align: left;
+              background: #5fbd43;
+              color: #787070;
+              padding: 1rem;
+            }
+  
+            td {
+              color: #fff;
+              text-align: left;
+              padding: 1rem;
+              background: #897d7d;
+            }
+  
+            tr {
+              border-bottom: 1px solid #fff;
+  
+              &:last-child {
+                border-bottom: none;
+              }
+  
+              &:nth-child(even) {
+                background: #fff;
+              }
+  
+              &:nth-child(odd) {
+                background: #f5f5f5;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 700px) {
+      .hero {
+        height: 100%;
+        padding: 10px;
+  
+        .hero__wrapper {
+          table {
+            th {
+              display: none;
+            }
+  
+            td {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 500px) {
+      .openbar {
+        width: 100%;
+      }
+  
+      .openbar .bar {
+        width: 90%;
+      }
+    }
+  }
+  
+  @keyframes fadeShow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
